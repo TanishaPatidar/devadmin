@@ -12,14 +12,17 @@ const data = [
 
 ];
 
-export const Chart = () => {
+export const Chart = ({aspect,title}) => {
   return (
     <div className="chart">
-      <div className="title">Last 6Months (Revenue)</div>
-      <ResponsiveContainer width="100%" aspect={2/1}>
+      <div className="title">{title}</div>
+      <ResponsiveContainer width="100%" aspect={aspect}>
         
-          <AreaChart width={730} height={250} data={data}
-            margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>
+          <AreaChart 
+          width={730}
+           height={200} 
+           data={data}
+          margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>
 
             <defs>
               <linearGradient id="total" x1="0" y1="0" x2="0" y2="1">
@@ -46,3 +49,4 @@ export const Chart = () => {
     </div>
   )
 }
+

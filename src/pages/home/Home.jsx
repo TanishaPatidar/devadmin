@@ -1,5 +1,5 @@
 import React from 'react'
-import {Navbar} from '../../components/Navbar'
+import Navbar from '../../components/Navbar'
 import { Sidebar } from '../../components/Sidebar'
 import { Widgets } from '../../components/Widgets'
 import { Featured } from '../../components/Featured'
@@ -26,7 +26,7 @@ export const Home = () => {
 
            <div className="charts">
            < Featured/>
-           <Chart/>
+           <Chart title="Last 6 months (Revenue)" aspect={2 / 1}/>
            </div>
 
            <div className="listcontainer">
